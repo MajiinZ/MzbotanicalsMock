@@ -10,6 +10,9 @@
   The mock cold-launched successfully in 669 ms and its process remained running;
   no crash entry was recorded for that process. A complete phone walkthrough is
   not yet recorded.
+- Rebuilt and reinstalled with the requested Android launcher label
+  `mzbotanicalMock`. APK metadata confirmed the exact name, installation preserved
+  app data, and the renamed application cold-launched successfully in 614 ms.
 - Windows portable application launched. The storefront, product details, cart,
   checkout, successful simulated order, order confirmation/timeline and admin
   summary were inspected. The $40.00 test item produced $5.00 sample shipping,

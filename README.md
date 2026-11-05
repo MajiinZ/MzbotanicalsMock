@@ -30,7 +30,7 @@ shipping quote. No actual payment account or identity verification is required.
 
 ## Separate installation and storage
 
-- Android app: **MZ Botanicals Mock**, ID `org.mz.botanicalsmock`.
+- Android app: **mzbotanicalMock**, ID `org.mz.botanicalsmock`.
 - Windows launcher: `MzbotanicalsMock.exe`.
 - Windows local data: `%USERPROFILE%\.mzbotanicals-mock\demo-state-v1.json`.
 - Android local data: private application preferences, backed up nowhere by this app.
