@@ -80,7 +80,7 @@ internal fun MockChrome(
     LaunchedEffect(drawerOpen) {
         if (drawerOpen) { focus.clearFocus(); drawerFocus.requestFocus() }
     }
-    BoxWithConstraints(Modifier.fillMaxSize().safeDrawingPadding().background(BrandCream)
+    BoxWithConstraints(Modifier.fillMaxSize().background(BrandCream).safeDrawingPadding()
         .onPreviewKeyEvent {
             if (drawerOpen && it.type == KeyEventType.KeyDown && it.key == Key.Escape) {
                 onDrawerChange(false); true

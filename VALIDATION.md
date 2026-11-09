@@ -15,8 +15,10 @@
   company artwork, botanical hero, New arrivals cards and matching navigation.
   A development runtime session reached the catalog without a logged exception.
 - Android retains the separate `org.mz.botanicalsmock` ID and `mzbotanicalMock`
-  label. The current APK is ready for installation; a connected-device walkthrough
-  of this design update is still pending.
+  label. The updated APK installed and cold-launched on the connected Android
+  emulator. Its matching order-history layout was inspected, and an Android
+  system-bar background mismatch was corrected and rebuilt. Physical-phone
+  installation and a complete phone walkthrough are still pending connection.
 - The existing offline commerce model and data storage locations were retained.
   The company repository's existing working-copy changes were not edited.
 
