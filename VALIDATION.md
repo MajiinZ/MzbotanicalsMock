@@ -1,4 +1,26 @@
-# Local validation — November 4, 2026
+# Local validation
+
+## Company design update — November 8, 2026
+
+- Mock version 1.0.1 uses the company application's actual brand resources,
+  welcome artwork, fonts, icons, header, drawer, four-tab navigation and
+  corresponding responsive storefront, details, cart and management layouts.
+- The combined Gradle validation passed Android debug assembly/lint, Windows
+  desktop compilation and complete portable app-image creation.
+- All 24 tests passed: 21 unchanged mock-commerce tests and 3 desktop window
+  sizing tests, with no failures, errors or skipped tests.
+- The updated Windows installation and all 417 copied files were verified against
+  the built app image. Desktop and Start menu shortcuts target the new version.
+- The Windows welcome-to-catalog flow was visually inspected, including the
+  company artwork, botanical hero, New arrivals cards and matching navigation.
+  A development runtime session reached the catalog without a logged exception.
+- Android retains the separate `org.mz.botanicalsmock` ID and `mzbotanicalMock`
+  label. The current APK is ready for installation; a connected-device walkthrough
+  of this design update is still pending.
+- The existing offline commerce model and data storage locations were retained.
+  The company repository's existing working-copy changes were not edited.
+
+## Original offline demo — November 4, 2026
 
 - 21 mock commerce tests passed with no failures or skipped tests. Coverage
   includes exact-cent totals, checkout success/failure, persisted retry safety,

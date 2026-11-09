@@ -12,3 +12,5 @@ local.properties
 .env*
 google-services.json
 **/service-account*.json
+__pycache__/
+*.pyc

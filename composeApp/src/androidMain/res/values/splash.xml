@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mz_brand_green">#00452C</color>
+    <style name="Theme.MzBotanicalsMock" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/mz_brand_green</item>
+    </style>
+    <style name="Theme.MzBotanicalsMock.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/mz_brand_green</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/mz_icon_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.MzBotanicalsMock</item>
+    </style>
+</resources>

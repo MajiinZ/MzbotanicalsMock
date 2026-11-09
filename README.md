@@ -1,7 +1,8 @@
 # MZ Botanicals Mock
 
-A fully offline Android and Windows demonstration of the MZ Botanicals shopping
-and administration experience. All products, customers, payments, shipping, tax,
+A fully offline Android and Windows demonstration using the company app's
+MZ Botanicals design, artwork, navigation and responsive screen layouts.
+All products, customers, payments, shipping, tax,
 tracking and orders are fictional. No real money is charged and nothing is sent
 to a business, payment processor or delivery carrier.
 
@@ -11,13 +12,15 @@ training, and is not a live commerce deployment.
 
 ## Try the demo
 
-1. Open **Shop**, search/filter the collection and view a product.
+1. Choose **Enter demo store**, then use **Home** to search/filter the collection
+   and view a product. **Explore** opens the collection categories.
 2. Add packs to the cart and adjust quantities.
 3. Open checkout. Use the prefilled fictional address and choose a simulated
    payment result: approved, declined or timed out. Only approved orders deduct
    stock and clear the cart.
-4. Open **Orders** to inspect line items, totals, status, tracking and the timeline.
-5. In **Admin**, progress an order through packing, shipping and delivery. Try
+4. Open the menu, then **Orders** to inspect line items, totals, status, tracking
+   and the timeline.
+5. Open **Menu → Admin panel**, then progress an order through packing, shipping and delivery. Try
    cancellation or refund on eligible orders; inventory is restored once.
 6. Edit product prices, pack sizes, publication and stock in the admin catalog.
    Approve/reject fictional customer profiles in the customer tab.
@@ -47,7 +50,7 @@ Gradle/Maven dependencies. Set `ANDROID_HOME` or a private `local.properties` SD
 path. No Google services file is required.
 
 ```powershell
-.\gradlew.bat :mockEngine:desktopTest :composeApp:compileKotlinDesktop :composeApp:assembleDebug :composeApp:lintDebug --console=plain
+.\gradlew.bat :mockEngine:desktopTest :composeApp:desktopTest :composeApp:compileKotlinDesktop :composeApp:assembleDebug :composeApp:lintDebug --console=plain
 .\gradlew.bat :composeApp:run
 .\gradlew.bat :composeApp:createDistributable
 ```
@@ -64,6 +67,7 @@ application files. The Android development APK is under
 - `mockEngine/`: serializable local commerce model, guarded state changes and tests.
 - `composeApp/`: shared Compose UI, Android/Windows entry points and local storage.
 - `.github/workflows/verify.yml`: engine tests and platform compilation.
+- `docs/VISUAL_PARITY.md`: company design references and intentional demo differences.
 
 Successful orders capture immutable prices and address snapshots. Payment retries
 use persisted request IDs, failed saves preserve the previous state, and order

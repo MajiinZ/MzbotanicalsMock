@@ -6,6 +6,9 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
 }
+compose.resources {
+    packageOfResClass = "org.mz.botanicalsmock.generated.resources"
+}
 kotlin {
     androidTarget { compilerOptions { jvmTarget.set(JvmTarget.JVM_11) } }
     jvm("desktop")
@@ -17,9 +20,14 @@ kotlin {
             implementation(compose.material3)
             implementation(compose.materialIconsExtended)
             implementation(compose.ui)
+            implementation(compose.components.resources)
             implementation(libs.kotlinx.coroutines.core)
         }
-        androidMain.dependencies { implementation(libs.androidx.activity.compose) }
+        androidMain.dependencies {
+            implementation(libs.androidx.activity.compose)
+            implementation(libs.androidx.core.ktx)
+            implementation(libs.splash.screen)
+        }
         named("desktopMain") {
             dependencies {
                 implementation(compose.desktop.currentOs)
@@ -37,8 +45,8 @@ android {
         applicationId = "org.mz.botanicalsmock"
         minSdk = 26
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 2
+        versionName = "1.0.1"
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -53,7 +61,7 @@ compose.desktop {
             targetFormats(TargetFormat.Msi, TargetFormat.Exe)
             includeAllModules = true
             packageName = "MzbotanicalsMock"
-            packageVersion = "1.0.0"
+            packageVersion = "1.0.1"
             description = "Offline MZ Botanicals sales demonstration"
             windows {
                 iconFile.set(project.file("src/desktopMain/resources/mock.ico"))
